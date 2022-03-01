@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="Theme.InLocoParentis.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.InLocoParentis.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.InLocoParentis.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
