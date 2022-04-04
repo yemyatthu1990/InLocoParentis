@@ -2,62 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.yemyatthu1990.child">
 
-
-
-
-
-    @Composable
-    fun NavigationComponent(navController: NavHostController, navigator: Navigator) {
-    LaunchedEffect("navigation") {
-    navigator.sharedFlow.onEach {
-    navController.navigate(it)
-    }.launchIn(this)
-    }
-    NavHost(
-    navController = navController,
-    startDestination = "home"
-    ) {
-    composable("home") {
-    Greeting("Child")
-    }
-    }
-    }
-
-    @Composable
-    fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-    }
-
-    @Preview(showBackground = true)
-    @Composable
-    fun HomePreview() {
-    Greeting(name = "Android")
-    @Composable
-    fun NavigationComponent(navController: NavHostController, navigator: Navigator) {
-    LaunchedEffect("navigation") {
-    navigator.sharedFlow.onEach {
-    navController.navigate(it)
-    }.launchIn(this)
-    }
-    NavHost(
-    navController = navController,
-    startDestination = "home"
-    ) {
-    composable("home") {
-    Greeting("Child")
-    }
-    }
-    }
-
-    @Composable
-    fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-    }
-
-    @Preview(showBackground = true)
-    @Composable
-    fun HomePreview() {
-    Greeting(name = "Android")
-
+    <application>
+        <service
+            android:name=".service.ChildNetworkGuard"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
 
 </manifest>
